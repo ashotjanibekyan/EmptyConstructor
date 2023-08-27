@@ -1,6 +1,6 @@
 # Empty constructor generator
 
-A simple C# source generator that generates an empty construcotr for a class if it is marked with the EmptyConstructor.EmptyConstructorAttribute attribute.
+A simple C# source generator that generates an empty constructor for a class if it is marked with the EmptyConstructor.EmptyConstructorAttribute attribute.
 
 ```csharp
 using EmptyConstructor;
@@ -15,3 +15,17 @@ public partial class ClassName()
     }
 }
 ```
+
+Generates
+
+```csharp
+using EmptyConstructor;
+
+[EmptyConstructor]
+public partial class ClassName()
+{
+    private string _name { get; set;}
+}
+```
+
+It does nothing if the class already has an empty constructor.
