@@ -21,7 +21,6 @@ Generates
 ```csharp
 using EmptyConstructor;
 
-[EmptyConstructor]
 partial class ClassName()
 {
     public ClassName()
