@@ -5,8 +5,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 
-
-
 namespace EmptyConstructor;
 
 [System.AttributeUsage(System.AttributeTargets.Class)]
@@ -15,11 +13,10 @@ public class EmptyConstructorAttribute : System.Attribute
 }
 
 /// <summary>
-/// A sample source generator that creates a custom report based on class properties. The target class should be annotated with the 'Generators.ReportAttribute' attribute.
-/// When using the source code as a baseline, an incremental source generator is preferable because it reduces the performance overhead.
+/// A simple source generator that generates an empty construcotr for a class.
 /// </summary>
 [Generator]
-public class EmptyConstructorGenerator : IIncrementalGenerator
+internal class EmptyConstructorGenerator : IIncrementalGenerator
 {
     private const string AttributeName = "EmptyConstructor.EmptyConstructorAttribute";
 
