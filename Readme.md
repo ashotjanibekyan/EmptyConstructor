@@ -22,9 +22,11 @@ Generates
 using EmptyConstructor;
 
 [EmptyConstructor]
-public partial class ClassName()
+partial class ClassName()
 {
-    private string _name { get; set;}
+    public ClassName()
+    {
+    }
 }
 ```
 
