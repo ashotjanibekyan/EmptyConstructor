@@ -21,7 +21,7 @@ public class EmptyConstructorAttribute : System.Attribute
 [Generator]
 public class EmptyConstructorGenerator : IIncrementalGenerator
 {
-    private const string AttributeName = "EmptyConstructor.GenerateEmptyConstructorAttribute";
+    private const string AttributeName = "EmptyConstructor.EmptyConstructorAttribute";
 
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
